@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
+    <vendor>SiFive</vendor>
+    <name>FU540</name>
+    <version>1.0</version>
+    <description>SiFive Freedom U540 64-bit RISC-V CPU</description>
+
+    <addressUnitBits>8</addressUnitBits>
+    <width>64</width>
+    <size>32</size>
+    <access>read-write</access>
+
+    <!-- TODO: remove this -->
+    <resetValue>0x00000000</resetValue>
+    <resetMask>0xFFFFFFFF</resetMask>
+
+    <peripherals>
+        <!-- MSEL -->
+        <peripheral>
+            <name>MSEL</name>
+            <description>Mode Select</description>
+            <groupName>MSEL</groupName>
+            <baseAddress>0x00001000</baseAddress>
+            <registers>
+                <register>
+                    <name>MSEL</name>
+                    <description>The MSEL pin state</description>
+                    <addressOffset>0x0000</addressOffset>
+                    <fields>
+                        <field>
+                            <name>MSEL</name>
+                            <bitRange>[3:0]</bitRange>
+                            <access>read-only</access>
+                        </field>
+                    </fields>
+                </register>
+            </registers>
+        </peripheral>
+        <!-- MSEL -->
+
+        <!-- PRCI -->
+        <peripheral>
+            <name>PRCI</name>
+            <description>PRCI (Power Reset Clocking Interrupt) Block</description>
+            <groupName>PRCI</groupName>
+            <baseAddress>0x10000000</baseAddress>
+            <registers>
+                <register>
+                    <name>hfxosccfg</name>
+                    <description>Crystal Input Control Register</description>
+                    <addressOffset>0x00</addressOffset>
+                    <resetValue>0x40000000</resetValue>
+                    <resetMask>0x60000000</resetMask>
+                    <fields>
+                        <field>
+                            <name>xosc_rdy</name>
+                            <description>Crystal input ready</description>
+                            <bitRange>[29:29]</bitRange>
+                        </field>
+                        <field>
+                            <name>xosccfg_en</name>
+                            <description>Crystal input enable</description>
+                            <bitRange>[30:30]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>corepllcfg0</name>
+                    <description>Core PLL Configuration Register</description>
+                    <addressOffset>0x04</addressOffset>
+                    <resetValue>0x020187c1</resetValue>
+                    <resetMask>0x831fffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>divr</name>
+                            <description>PLL reference divider value minus one</description>
+                            <bitRange>[5:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>divf</name>
+                            <description>PLL feedback divider value minus one</description>
+                            <bitRange>[14:6]</bitRange>
+                        </field>
+                        <field>
+                            <name>divq</name>
+                            <description>Log2 of PLL output divider. Valid settings are 1, 2, 3, 4, 5, 6</description>
+                            <bitRange>[17:15]</bitRange>
+                        </field>
+                        <field>
+                            <name>range</name>
+                            <description>PLL filter range. 3'b100 = 33MHz</description>
+                            <bitRange>[20:18]</bitRange>
+                        </field>
+                        <field>
+                            <name>bypass</name>
+                            <description>PLL bypass</description>
+                            <bitRange>[24:24]</bitRange>
+                        </field>
+                        <field>
+                            <name>fse</name>
+                            <description>Internal or external input path. Valid setting is 1, internal feedback.</description>
+                            <bitRange>[25:25]</bitRange>
+                        </field>
+                        <field>
+                            <name>lock</name>
+                            <description>PLL locked</description>
+                            <bitRange>[31:31]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>ddrpllcfg0</name>
+                    <description>DDR PLL Configuration Register</description>
+                    <addressOffset>0x0c</addressOffset>
+                    <resetValue>0x020187c1</resetValue>
+                    <resetMask>0x831fffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>divr</name>
+                            <description>PLL reference divider value minus one</description>
+                            <bitRange>[5:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>divf</name>
+                            <description>PLL feedback divider value minus one</description>
+                            <bitRange>[14:6]</bitRange>
+                        </field>
+                        <field>
+                            <name>divq</name>
+                            <description>Log2 of PLL output divider. Valid settings are 1,2,3,4,5,6</description>
+                            <bitRange>[17:15]</bitRange>
+                        </field>
+                        <field>
+                            <name>range</name>
+                            <description>PLL filter range. 3'b100 = 33MHz</description>
+                            <bitRange>[20:18]</bitRange>
+                        </field>
+                        <field>
+                            <name>bypass</name>
+                            <description>PLL bypass</description>
+                            <bitRange>[24:24]</bitRange>
+                        </field>
+                        <field>
+                            <name>fse</name>
+                            <description>Internal or external input path. Valid settings is 1, internal feedback.</description>
+                            <bitRange>[25:25]</bitRange>
+                        </field>
+                        <field>
+                            <name>lock</name>
+                            <description>PLL locked</description>
+                            <bitRange>[31:31]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>ddrpllcfg1</name>
+                    <description>DDR PLL Configuration Register</description>
+                    <addressOffset>0x10</addressOffset>
+                    <resetValue>0x00000000</resetValue>
+                    <resetMask>0x01000000</resetMask>
+                    <fields>
+                        <field>
+                            <name>cke</name>
+                            <description>PLL clock output enable. Glitch free clock gate after PLL output. 1 enables clock, 0 disables clock</description>
+                            <bitRange>[24:24]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>gemgxlpllcfg0</name>
+                    <description>Gigabit Ethernet PLL Configuration Register</description>
+                    <addressOffset>0x1c</addressOffset>
+                    <resetValue>0x020187c1</resetValue>
+                    <resetMask>0x831fffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>divr</name>
+                            <description>PLL reference divider value minus one</description>
+                            <bitRange>[5:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>divf</name>
+                            <description>PLL feedback divider value minus one</description>
+                            <bitRange>[14:6]</bitRange>
+                        </field>
+                        <field>
+                            <name>divq</name>
+                            <description>Log2 of PLL output divider. Valid settings are 1,2,3,4,5,6</description>
+                            <bitRange>[17:15]</bitRange>
+                        </field>
+                        <field>
+                            <name>range</name>
+                            <description>PLL filter range. 3'b100 = 33MHz</description>
+                            <bitRange>[20:18]</bitRange>
+                        </field>
+                        <field>
+                            <name>bypass</name>
+                            <description>PLL bypass</description>
+                            <bitRange>[24:24]</bitRange>
+                        </field>
+                        <field>
+                            <name>fse</name>
+                            <description>Internal or external input path. Valid settings is 1, internal feedback.</description>
+                            <bitRange>[25:25]</bitRange>
+                        </field>
+                        <field>
+                            <name>lock</name>
+                            <description>PLL locked</description>
+                            <bitRange>[31:31]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>gemgxlpllcfg1</name>
+                    <description>Gigabit Ethernet PLL Configuration Register</description>
+                    <addressOffset>0x20</addressOffset>
+                    <resetValue>0x00000000</resetValue>
+                    <resetMask>0x01000000</resetMask>
+                    <fields>
+                        <field>
+                            <name>cke</name>
+                            <description>PLL clock output enable. Glitch free clock gate after PLL output. 1 enables clock, 0 disables clock</description>
+                            <bitRange>[24:24]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>coreclksel</name>
+                    <description>CORECLK Source Selection Register</description>
+                    <addressOffset>0x24</addressOffset>
+                    <resetValue>0x00000001</resetValue>
+                    <resetMask>0x00000001</resetMask>
+                    <fields>
+                        <field>
+                            <name>coreclksel</name>
+                            <description>CORECLK select. 0 = CORE_PLL output 1 = HFCLK</description>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>devicesresetreg</name>
+                    <description>Peripheral Devices Reset Control Register</description>
+                    <addressOffset>0x28</addressOffset>
+                    <resetValue>0x00000000</resetValue>
+                    <resetMask>0x0000002f</resetMask>
+                    <fields>
+                        <field>
+                            <name>DDR_CTRL_RST_N</name>
+                            <description>DDR Controller reset (active low)</description>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>DDR_AXI_RST_N</name>
+                            <description>DDR Controller AXI interface reset (active low)</description>
+                            <bitRange>[1:1]</bitRange>
+                        </field>
+                        <field>
+                            <name>DDR_AHB_RST_N</name>
+                            <description>DDR Controller AHB interface reset (active low)</description>
+                            <bitRange>[2:2]</bitRange>
+                        </field>
+                        <field>
+                            <name>DDR_PHY_RST_N</name>
+                            <description>DDR PHY reset (active low)</description>
+                            <bitRange>[3:3]</bitRange>
+                        </field>
+                        <field>
+                            <name>GEMGXL_RST_N</name>
+                            <description>Gigabit Ethernet Subsystem reset (active low)</description>
+                            <bitRange>[5:5]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>clkmuxstatus</name>
+                    <description>CLKMUX Status Register</description>
+                    <addressOffset>0x2c</addressOffset>
+                    <fields>
+                        <field>
+                            <name>coreclkpllsel</name>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>tlclksel</name>
+                            <bitRange>[1:1]</bitRange>
+                        </field>
+                        <field>
+                            <name>rtcxsel</name>
+                            <bitRange>[2:2]</bitRange>
+                        </field>
+                        <field>
+                            <name>ddrctrlclksel</name>
+                            <bitRange>[3:3]</bitRange>
+                        </field>
+                        <field>
+                            <name>ddrphyclksel</name>
+                            <bitRange>[4:4]</bitRange>
+                        </field>
+                        <field>
+                            <name>gemgxlclksel</name>
+                            <bitRange>[6:6]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>procmoncfg</name>
+                    <description>PROCMON Configuration Register</description>
+                    <addressOffset>0xf0</addressOffset>
+                    <fields>
+                        <field>
+                            <name>coreclksel</name>
+                            <description>Select CORECLK</description>
+                            <bitRange>[24:24]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+            </registers>
+        </peripheral>
+        <!-- PRCI -->
+
+        <!-- UART0 -->
+        <peripheral>
+            <name>UART0</name>
+            <description>Universal Asynchronous Receiver Transmitter 0</description>
+            <groupName>UART</groupName>
+            <baseAddress>0x10010000</baseAddress>
+            <registers>
+                <!-- Data Registers -->
+                <register>
+                    <name>txdata</name>
+                    <description>Transmit Data Register</description>
+                    <addressOffset>0x00</addressOffset>
+                    <fields>
+                        <field>
+                            <name>data</name>
+                            <description>Transmit data</description>
+                            <bitRange>[7:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>full</name>
+                            <description>Transmit FIFO full</description>
+                            <bitRange>[31:31]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>rxdata</name>
+                    <description>Receive Data Register</description>
+                    <addressOffset>0x04</addressOffset>
+                    <fields>
+                        <field>
+                            <name>data</name>
+                            <description>Received data</description>
+                            <bitRange>[7:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>empty</name>
+                            <description>Receive FIFO empty</description>
+                            <bitRange>[31:31]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+                <!-- Data Registers -->
+
+                <!-- Control Registers -->
+                <register>
+                    <name>txctrl</name>
+                    <description>Transmit Control Register</description>
+                    <addressOffset>0x08</addressOffset>
+                    <resetValue>0x00000000</resetValue>
+                    <resetMask>0x00070003</resetMask>
+                    <fields>
+                        <field>
+                            <name>txen</name>
+                            <description>Transmit enable</description>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>nstop</name>
+                            <description>Number of stop bits</description>
+                            <bitRange>[1:1]</bitRange>
+                        </field>
+                        <field>
+                            <name>txcnt</name>
+                            <description>Transmit watermark level</description>
+                            <bitRange>[18:16]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>rxctrl</name>
+                    <description>Receive Control Register</description>
+                    <addressOffset>0x0C</addressOffset>
+                    <resetValue>0x00000000</resetValue>
+                    <resetMask>0x00070001</resetMask>
+                    <fields>
+                        <field>
+                            <name>rxen</name>
+                            <description>Receive enable</description>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>rxcnt</name>
+                            <description>Receive watermark level</description>
+                            <bitRange>[18:16]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+                <!-- Control Registers -->
+
+                <!-- Interrupt Registers -->
+                <register>
+                    <name>ie</name>
+                    <description>Interrupt Enable Register</description>
+                    <addressOffset>0x10</addressOffset>
+                    <resetValue>0x00000000</resetValue>
+                    <resetMask>0x00000003</resetMask>
+                    <fields>
+                        <field>
+                            <name>txwm</name>
+                            <description>Transmit watermark interrupt enable</description>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>rxwm</name>
+                            <description>Receive watermark interrupt enable</description>
+                            <bitRange>[1:1]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+
+                <register>
+                    <name>ip</name>
+                    <description>Interrupt Pending Register</description>
+                    <addressOffset>0x14</addressOffset>
+                    <fields>
+                        <field>
+                            <name>txwm</name>
+                            <description>Transmit watermark interrupt pending</description>
+                            <bitRange>[0:0]</bitRange>
+                        </field>
+                        <field>
+                            <name>rxwm</name>
+                            <description>Receive watermark interrupt pending</description>
+                            <bitRange>[1:1]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+                <!-- Interrupt Registers -->
+
+                <!-- Configuration Registers -->
+                <register>
+                    <name>div</name>
+                    <description>Baud Rate Divisor Register</description>
+                    <addressOffset>0x18</addressOffset>
+                    <resetValue>289</resetValue>
+                    <resetMask>0x000fffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>div</name>
+                            <description>Baud rate divisor</description>
+                            <bitRange>[19:0]</bitRange>
+                        </field>
+                    </fields>
+                </register>
+                <!-- Configuration Registers -->
+            </registers>
+        </peripheral>
+        <!-- UART0 -->
+
+        <!-- UART1 -->
+        <peripheral derivedFrom="UART0">
+            <name>UART1</name>
+            <description>Universal Asynchronous Receiver Transmitter 1</description>
+            <baseAddress>0x10011000</baseAddress>
+        </peripheral>
+        <!-- UART1 -->
+    </peripherals>
+</device>
