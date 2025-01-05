@@ -33158,7 +33158,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               <access>read-write</access>
             </field>
             <field>
-              <name>DPXPIE</name>
+              <name>DXPIE</name>
               <description>DXP interrupt enabled</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -33465,8 +33465,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>CGFR</name>
-          <displayName>CGFR</displayName>
+          <name>I2SCFGR</name>
+          <displayName>I2SCFGR</displayName>
           <description>configuration register</description>
           <addressOffset>0x50</addressOffset>
           <size>0x20</size>
@@ -41966,8 +41966,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_RSR</name>
-          <displayName>C1_RSR</displayName>
+          <name>RSR</name>
+          <displayName>RSR</displayName>
           <description>RCC Reset Status Register</description>
           <addressOffset>0x130</addressOffset>
           <size>0x20</size>
@@ -42048,8 +42048,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB3ENR</name>
-          <displayName>C1_AHB3ENR</displayName>
+          <name>AHB3ENR</name>
+          <displayName>AHB3ENR</displayName>
           <description>RCC AHB3 Clock Register</description>
           <addressOffset>0x134</addressOffset>
           <size>0x20</size>
@@ -42101,8 +42101,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB1ENR</name>
-          <displayName>C1_AHB1ENR</displayName>
+          <name>AHB1ENR</name>
+          <displayName>AHB1ENR</displayName>
           <description>RCC AHB1 Clock Register</description>
           <addressOffset>0x138</addressOffset>
           <size>0x20</size>
@@ -42178,8 +42178,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB2ENR</name>
-          <displayName>C1_AHB2ENR</displayName>
+          <name>AHB2ENR</name>
+          <displayName>AHB2ENR</displayName>
           <description>RCC AHB2 Clock Register</description>
           <addressOffset>0x13C</addressOffset>
           <size>0x20</size>
@@ -42242,8 +42242,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB4ENR</name>
-          <displayName>C1_AHB4ENR</displayName>
+          <name>AHB4ENR</name>
+          <displayName>AHB4ENR</displayName>
           <description>RCC AHB4 Clock Register</description>
           <addressOffset>0x140</addressOffset>
           <size>0x20</size>
@@ -42364,8 +42364,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB3ENR</name>
-          <displayName>C1_APB3ENR</displayName>
+          <name>APB3ENR</name>
+          <displayName>APB3ENR</displayName>
           <description>RCC APB3 Clock Register</description>
           <addressOffset>0x144</addressOffset>
           <size>0x20</size>
@@ -42388,8 +42388,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB1LENR</name>
-          <displayName>C1_APB1LENR</displayName>
+          <name>APB1LENR</name>
+          <displayName>APB1LENR</displayName>
           <description>RCC APB1 Clock Register</description>
           <addressOffset>0x148</addressOffset>
           <size>0x20</size>
@@ -42567,8 +42567,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB1HENR</name>
-          <displayName>C1_APB1HENR</displayName>
+          <name>APB1HENR</name>
+          <displayName>APB1HENR</displayName>
           <description>RCC APB1 Clock Register</description>
           <addressOffset>0x14C</addressOffset>
           <size>0x20</size>
@@ -42613,8 +42613,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB2ENR</name>
-          <displayName>C1_APB2ENR</displayName>
+          <name>APB2ENR</name>
+          <displayName>APB2ENR</displayName>
           <description>RCC APB2 Clock Register</description>
           <addressOffset>0x150</addressOffset>
           <size>0x20</size>
@@ -42729,8 +42729,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB4ENR</name>
-          <displayName>C1_APB4ENR</displayName>
+          <name>APB4ENR</name>
+          <displayName>APB4ENR</displayName>
           <description>RCC APB4 Clock Register</description>
           <addressOffset>0x154</addressOffset>
           <size>0x20</size>
@@ -42823,8 +42823,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB3LPENR</name>
-          <displayName>C1_AHB3LPENR</displayName>
+          <name>AHB3LPENR</name>
+          <displayName>AHB3LPENR</displayName>
           <description>RCC AHB3 Sleep Clock Register</description>
           <addressOffset>0x15C</addressOffset>
           <size>0x20</size>
@@ -42911,8 +42911,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB1LPENR</name>
-          <displayName>C1_AHB1LPENR</displayName>
+          <name>AHB1LPENR</name>
+          <displayName>AHB1LPENR</displayName>
           <description>RCC AHB1 Sleep Clock Register</description>
           <addressOffset>0x160</addressOffset>
           <size>0x20</size>
@@ -42992,8 +42992,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB2LPENR</name>
-          <displayName>C1_AHB2LPENR</displayName>
+          <name>AHB2LPENR</name>
+          <displayName>AHB2LPENR</displayName>
           <description>RCC AHB2 Sleep Clock Register</description>
           <addressOffset>0x164</addressOffset>
           <size>0x20</size>
@@ -43059,8 +43059,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_AHB4LPENR</name>
-          <displayName>C1_AHB4LPENR</displayName>
+          <name>AHB4LPENR</name>
+          <displayName>AHB4LPENR</displayName>
           <description>RCC AHB4 Sleep Clock Register</description>
           <addressOffset>0x168</addressOffset>
           <size>0x20</size>
@@ -43182,8 +43182,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB3LPENR</name>
-          <displayName>C1_APB3LPENR</displayName>
+          <name>APB3LPENR</name>
+          <displayName>APB3LPENR</displayName>
           <description>RCC APB3 Sleep Clock Register</description>
           <addressOffset>0x16C</addressOffset>
           <size>0x20</size>
@@ -43207,8 +43207,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB1LLPENR</name>
-          <displayName>C1_APB1LLPENR</displayName>
+          <name>APB1LLPENR</name>
+          <displayName>APB1LLPENR</displayName>
           <description>RCC APB1 Low Sleep Clock
           Register</description>
           <addressOffset>0x170</addressOffset>
@@ -43387,8 +43387,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB1HLPENR</name>
-          <displayName>C1_APB1HLPENR</displayName>
+          <name>APB1HLPENR</name>
+          <displayName>APB1HLPENR</displayName>
           <description>RCC APB1 High Sleep Clock
           Register</description>
           <addressOffset>0x174</addressOffset>
@@ -43434,8 +43434,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB2LPENR</name>
-          <displayName>C1_APB2LPENR</displayName>
+          <name>APB2LPENR</name>
+          <displayName>APB2LPENR</displayName>
           <description>RCC APB2 Sleep Clock Register</description>
           <addressOffset>0x178</addressOffset>
           <size>0x20</size>
@@ -43550,8 +43550,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>C1_APB4LPENR</name>
-          <displayName>C1_APB4LPENR</displayName>
+          <name>APB4LPENR</name>
+          <displayName>APB4LPENR</displayName>
           <description>RCC APB4 Sleep Clock Register</description>
           <addressOffset>0x17C</addressOffset>
           <size>0x20</size>
