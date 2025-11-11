@@ -12,6 +12,9 @@ Apache License, version 2.0.
 * `Atmel.SAM3U_DFP.1.0.49.atpack`: `ATSAM3U*.svd`
 * `Atmel.SAM3X_DFP.1.0.50.atpack`: `ATSAM3X*.svd`
 * `Atmel.SAM4S_DFP.1.0.56.atpack`: `ATSAM4S*.svd`
+* `Microchip.SAMD10_DFP.2.7.81.atpack`: `ATSAMD10*.svd`
+* `Microchip.SAMD11_DFP.2.7.195.atpack`: `ATSAMD11*.svd`
+* `Microchip.SAMD20_DFP.3.7.231.atpack`: `ATSAMD20*.svd`
 * `Atmel.SAMD21_DFP.1.3.331.atpack`: `ATSAMD21*.svd`
 * `Atmel.SAMD51_DFP.1.2.139.atpack`: `ATSAMD51*.svd`
 * `Atmel.SAME70_DFP.4.8.125.atpack`: `ATSAME70*B.svd`
